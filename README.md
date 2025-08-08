@@ -25,6 +25,75 @@ The model was trained using TensorFlow/Keras on transaction data to classify whe
 
 ---
 
+### 📈 Model Performance
+
+We trained and evaluated multiple machine learning models for fraud detection. Below are the performance metrics based on classification scores and evaluation datasets.
+
+#### ✅ Random Forest (Best Performing Model)
+
+* **Best Parameters**:
+  `max_depth=None`, `min_samples_split=7`, `n_estimators=141`
+* **Accuracy**: `0.9975`
+* **Precision**: `0.9974`
+* **Recall**: `0.9975`
+* **F1 Score**: `0.9974`
+
+#### 🔹 Logistic Regression
+
+* **Best Parameters**:
+  `C=10.0435`, `penalty='l2'`
+* **Accuracy**: `0.9951`
+* **Precision**: `0.9951`
+* **Recall**: `0.9951`
+* **F1 Score**: `0.9932`
+
+#### 🔹 Support Vector Machine (SVM)
+
+* **Best Parameters**:
+  `C=9.9050`, `kernel='linear'`
+* **Accuracy**: `0.9951`
+* **Precision**: `0.9951`
+* **Recall**: `0.9951`
+* **F1 Score**: `0.9932`
+
+---
+
+### 🧪 Final Evaluation on Test Set
+
+| Model               | Accuracy | Precision | Recall | F1 Score |
+| ------------------- | -------- | --------- | ------ | -------- |
+| **Random Forest**   | 0.9982   | 0.9231    | 0.7500 | 0.8276   |
+| Logistic Regression | 0.9951   | 1.0000    | 0.1250 | 0.2222   |
+| SVM                 | 0.9944   | 0.0000    | 0.0000 | 0.0000   |
+| Decision Tree       | 0.9979   | 0.8125    | 0.8125 | 0.8125   |
+
+---
+
+### 🔍 Additional Insights
+
+* **PCA (Dimensionality Reduction)**
+
+  * Explained Variance Ratio: `60.56%`
+
+* **Clustering (Silhouette Score)**
+
+  * Silhouette Score: `0.8041` (indicates good clustering structure)
+
+* **Imbalanced Class Support**:
+
+  ```
+  Class 0: Support = 2833 (legitimate)
+  Class 1: Support = 16 (fraudulent)
+  Macro F1 Score: 0.61 | Weighted F1 Score: 0.99
+  ```
+
+---
+
+### 🏆 Summary
+
+> **Random Forest** achieved the best performance in terms of **F1-score** and is selected as the final model for deployment.
+
+
 ## 🛠️ Tech Stack
 
 - Python 🐍
